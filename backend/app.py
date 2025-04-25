@@ -43,10 +43,11 @@ chart = pdk.Deck(
     map_style="mapbox://styles/mapbox/light-v9",
     tooltip={
         "text": "{Facility}\n"
+        "Parking Lot: {Parking Lot}\n"
                 "Chargers: {Number of Chargers}\n"
                 "Fee: {Charge Fee}\n"
                 "Level: {Charger Level}\n"
-                "Manufacturer: {Manufacturer}"
+                "Manufacturer: {Manufacturer}",
     },
 )
 

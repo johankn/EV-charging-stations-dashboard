@@ -1,81 +1,82 @@
-Facility,Latitude,Longitude,Number of Chargers,Charger Level,Charge Fee,Manufacturer
-Hotel,21.27763798834684,-157.82731739757017,1.0,2.0,Free,AeroVironment
-Hotel,21.277871812074466,-157.8275152484166,2.0,2.0,Unknown,AeroVironment
-Hotel,21.278906032408145,-157.83238957381542,1.0,2.0,"Free until further notice,  fee amount TBD",AeroVironment
-Commercial,21.416506215332234,-157.80532318199687,3.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Hotel,21.272511852779814,-157.82323447555714,2.0,2.0,Free,AeroVironment
-Commercial,21.374324099716887,-157.77992312662604,2.0,2.0,Free for up to 2 hours,Volta
-Commercial,21.293461524831603,-157.86003755519,1.0,2.0,"$1.00 per session plus $1.00/hour.  
+Facility,Parking Lot,Latitude,Longitude,Number of Chargers,Charger Level,Charge Fee,Manufacturer
+Hotel,Outrigger Waikiki,21.27763798834684,-157.82731739757017,1.0,2.0,Free,AeroVironment
+Hotel,Holiday Inn Beachcomber,21.277871812074466,-157.8275152484166,2.0,2.0,Unknown,AeroVironment
+Hotel,Outrigger Reef,21.278906032408145,-157.83238957381542,1.0,2.0,"Free until further notice,  fee amount TBD",AeroVironment
+Commercial,"Enterprise Rent-a-Car, Kaneohe",21.416506215332234,-157.80532318199687,3.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Hotel,Waikiki Beach Marriott,21.272511852779814,-157.82323447555714,2.0,2.0,Free,AeroVironment
+Commercial,Whole Foods Kailua,21.374324099716887,-157.77992312662604,2.0,2.0,Free for up to 2 hours,Volta
+Commercial,Kakaako Piano Lot Parking Facility,21.293461524831603,-157.86003755519,1.0,2.0,"$1.00 per session plus $1.00/hour.  
 ",Shorepower
-Hotel,21.285526846034113,-157.83420892244482,2.0,2.0,"Hawaii
+Hotel,Double Tree by Hilton Alana Waikiki Hotel,21.285526846034113,-157.83420892244482,2.0,2.0,"Hawaii
 HECO Rates + Surcharge (TBD)
 ",ECOtality Blink
-Hotel,21.33722706600821,-157.9174564445669,1.0,2.0,Free,AeroVironment
-Commercial,21.453248200399102,-158.00784762085445,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.333395954163393,-157.91460559373402,2.0,2.0,"Free, 4 hours at a time",Better Place
-Commercial,21.311183536789333,-157.86094481970065,1.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.307783262768965,-157.86244491603463,1.0,2.0,"1st 2 hours free, $5 every additional hour",ChargePro
-Commercial,21.29189224251121,-157.83970106191362,1.0,2.0,"1st 2 hours free, $5 every additional hour",ChargePro
-Hotel,21.272511852779814,-157.82323447555714,1.0,2.0,Free,
-Hotel,21.280911520533493,-157.8279019568892,2.0,2.0,Free,AeroVironment
-Commercial,21.33549137449171,-157.8816364481399,3.0,2.0,Free for all Nissan Leafs,AeroVironment
-Commercial,21.280111123927384,-157.82698464841934,2.0,2.0,Free,AeroVironment
-Hotel,21.340239794806394,-158.12284360961843,12.0,,"
+Hotel,Ohana Honolulu Airport,21.33722706600821,-157.9174564445669,1.0,2.0,Free,AeroVironment
+Commercial,Town Center of Mililani,21.453248200399102,-158.00784762085445,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,Enterprise Rent A Car Honolulu Airport,21.333395954163393,-157.91460559373402,2.0,2.0,"Free, 4 hours at a time",Better Place
+Commercial,Mark’s Garage,21.311183536789333,-157.86094481970065,1.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,Davies Pacific Center,21.307783262768965,-157.86244491603463,1.0,2.0,"1st 2 hours free, $5 every additional hour",ChargePro
+Commercial,The Pan Am Building,21.29189224251121,-157.83970106191362,1.0,2.0,"1st 2 hours free, $5 every additional hour",ChargePro
+Hotel,Marriot Waikiki Beach,21.272511852779814,-157.82323447555714,1.0,2.0,Free,
+Hotel,Ohana Waikiki Malia,21.280911520533493,-157.8279019568892,2.0,2.0,Free,AeroVironment
+Commercial,New City Nissan,21.33549137449171,-157.8816364481399,3.0,2.0,Free for all Nissan Leafs,AeroVironment
+Commercial,Waikiki Trade Center,21.280111123927384,-157.82698464841934,2.0,2.0,Free,AeroVironment
+Hotel,"Aulani A Disney Resort and Spa, Ko Olina",21.340239794806394,-158.12284360961843,12.0,,"
 ",Charge Point
-Commercial,21.3947297165617,-157.7432487742712,1.0,,Free,AeroVironment
-Commercial,21.385934347115153,-157.94082083088813,1.0,2.0,Free,Volta
-Commercial,21.308592652595337,-157.85289411608346,4.0,2.0,"Free until further notice, anticipated fee will be $2.00/hour",Coulomb
-Government,21.301576014347276,-157.86136064277085,1.0,2.0,$2.00/hour up to 4 hours,Eaton
-Commercial,21.41153804528932,-157.99960051872316,1.0,,Free,AeroVironment
-Commercial,21.365303899762978,-157.92906669196518,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.299662384844396,-157.8573277736879,2.0,2.0,$4.00 per session plus $2.00/30 minutes,ChargePoint Network and Tesla
-Commercial,21.399988788222664,-158.00521770573695,2.0,2.0,Free,AeroVironment
-School,21.2982107179128, -157.8203613,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.638913194296748,-157.91929194484317,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.30729762887313,-157.86053835333252,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.315085757646898,-157.86148264146328,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Hotel,21.275389683273545,-157.82233515352786,2.0,2.0,Free,AeroVironment
-Hotel,21.286010676439616,-157.84029461445297,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Hotel,21.278717174782003,-157.82857644841118,3.0,2.0,Charging stations free for hotel guest and patrons of the hotel with parking validation,
-Commercial,21.278465364613794,-157.78658710286317,2.0,2.0,Free,Volta
-Commercial,21.425325812664497,-157.99796942170946,1.0,2.0,Free,Volta
-Commercial,21.385934347115153,-157.94082083088813,1.0,2.0,Free,Volta
-Commercial,21.319174147958822,-157.87623425225317,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commecial,21.333122240610425,-157.86936304388902,4.0,2.0,"Free, 4 hours at a time",Better Place
-Commercial,21.289311188287115,-157.8421921839348,4.0,2.0,Free,Better Place
-Commercial,21.343776924855927,-157.92813395368722,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Government,21.308133998360404,-157.8065790315745,1.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",AeroVironment
-Commercial,21.345051167663144,-157.89474856332708,1.0,2.0,Free,Volta
-Commercial,21.647158676827154,-157.92152970923166,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Government,21.327829461113208,-158.08683820776824,2.0,2.0,$2.00/hour up to 4 hours,Volta
-Hotel,21.28477333511022,-157.83574728358352,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.428364360457522,-157.99888106109972,1.0,2.0,Free,AeroVironment
-Commercial,21.333769206953146,-158.02317141687146,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.399453085430384,-157.79902564501552,1.0,2.0,Free,AeroVironment
-Commercial,21.287044896773295,-157.80755929258643,1.0,2.0,Free until further notice,AeroVironment
-Commercial,21.30097539500713,-157.8631373939972,1.0,2.0,"1st 2 hours free, $5 every additional hour",ChargePro
-Commercial,21.27824053410643,-157.78427584524786,1.0,,Free,AeroVironment
-Hotel,21.33653458804565,-157.9131037259451,2.0,2.0,Free,AeroVironment
-School,21.286347176348407,-157.82475281350472,2.0,2.0,Free,AeroVironment
-Government,21.307522459380436,-157.85646442453978,1.0,2.0,$2.00/hr up to 4 hours,Eaton
-Commercial,21.371864453966737,-157.93368920719575,1.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.33583311686283,-157.9082114141057,1.0,2.0,"Free, 4 hours at a time",Better Place
-Commercial,21.29030943573963,-157.83557317379913,1.0,2.0,$2.00/hour,Eaton?
-Hotel,21.6976574741794,-157.99224422954634,6.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Hotel,21.278564290037025,-157.82506909249693,2.0,2.0,Free,AeroVironment
-Commercial,21.394001265717975,-157.74199871665047,2.0,2.0,Free for up to 2 hours,Volta
-Condo,21.302297398390238,-157.8581101838534,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Hotel,21.278276506987652,-157.83050099755388,2.0,2.0,Free,Eaton
-Condo,21.29181130352856,-157.84994433982735,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.28042588663766,-157.82819873315887,2.0,2.0,Unknown,AeroVironment
-Commercial,21.297018378078235,-157.840879173772,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.33845913718835,-158.0784440810319,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Commercial,21.3072256831108,-157.86340719060598,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Airport,21.335604930654792,-157.91871398519555,1.0,2.0,Flat $7/session,
-Commercial,21.328854377915434,-158.0914212979147,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Hotel,21.277494096822124,-157.82488922809105,2.0,2.0,Free,AeroVironment
-Commercial,21.277323225636565,-157.8247093636852,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
-Hotel,21.279148849356034,-157.82297367216864,1.0,2.0,Free to Hotel Guests - Non Guests/Bar Patrons $10.00 per session,Schneider Electric
-Commercial,21.362489021811257,-157.90030637346817,2.0,2.0,Free.,Volta
-Hotel,21.278030000184515,-157.82469000024318,2.0,2.0,Free,AeroVironment
-Hotel,21.279037461318318,-157.83102218381737,1.0,,Free,AeroVironment
+Commercial,Kailua Shell,21.3947297165617,-157.7432487742712,1.0,,Free,AeroVironment
+Commercial,Pearlridge Shopping Center (downtown),21.385934347115153,-157.94082083088813,1.0,2.0,Free,Volta
+Commercial,Queen’s Physician Office Building,21.308592652595337,-157.85289411608346,4.0,2.0,"Free until further notice, anticipated fee will be $2.00/hour",Coulomb
+Government,Ka`ahumanu Hale parking Garage  First Circuit Court,21.301576014347276,-157.86136064277085,1.0,2.0,$2.00/hour up to 4 hours,Eaton
+Commercial,Aloha Island Mart Waipio-Gentry,21.41153804528932,-157.99960051872316,1.0,,Free,AeroVironment
+Commercial,Stadium Marketplace,21.365303899762978,-157.92906669196518,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,Green Energy Outlet,21.299662384844396,-157.8573277736879,2.0,2.0,$4.00 per session plus $2.00/30 minutes,ChargePoint Network and Tesla
+Commercial,Waikele Center,21.399988788222664,-158.00521770573695,2.0,2.0,Free,AeroVironment
+School,Univ of Hawaii Lower Campus Parking Garage,38.51372000007808,-121.49462000001284,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,Polynesian Cultural Center,21.638913194296748,-157.91929194484317,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,Central Pacific Plaza,21.30729762887313,-157.86053835333252,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,USA Hawaii Credit Union,21.315085757646898,-157.86148264146328,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Hotel,Hilton Waikiki Prince,21.275389683273545,-157.82233515352786,2.0,2.0,Free,AeroVironment
+Hotel,Hawaii Prince Hotel,21.286010676439616,-157.84029461445297,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Hotel,Sheraton Waikiki,21.278717174782003,-157.82857644841118,3.0,2.0,Charging stations free for hotel guest and patrons of the hotel with parking validation,
+Commercial,Kahala Mall,21.278465364613794,-157.78658710286317,2.0,2.0,Free,Volta
+Commercial,Kaiser Permanente Waipio,21.425325812664497,-157.99796942170946,1.0,2.0,Free,Volta
+Commercial,Pearlridge Shopping Center (uptown),21.385934347115153,-157.94082083088813,1.0,2.0,Free,Volta
+Commercial,Nimitz Center,21.319174147958822,-157.87623425225317,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commecial,Bishop Museum,21.333122240610425,-157.86936304388902,4.0,2.0,"Free, 4 hours at a time",Better Place
+Commercial,Ala Moana Center,21.289311188287115,-157.8421921839348,4.0,2.0,Free,Better Place
+Commercial,Moanalua Shopping Center,21.343776924855927,-157.92813395368722,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Government,Univ of Hawaii Faculty Housing,21.308133998360404,-157.8065790315745,1.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",AeroVironment
+Commercial,Kaiser Permanente Mapunapuna,21.345051167663144,-157.89474856332708,1.0,2.0,Free,Volta
+Commercial,Laie Village Center,21.647158676827154,-157.92152970923166,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Government,Kapolei Judiciary State Ownership,21.327829461113208,-158.08683820776824,2.0,2.0,$2.00/hour up to 4 hours,Volta
+Hotel,Hilton Hawaiian Village,21.28477333511022,-157.83574728358352,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,Tony Nissan,21.428364360457522,-157.99888106109972,1.0,2.0,Free,AeroVironment
+Commercial,Ewa Town Center,21.333769206953146,-158.02317141687146,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,King Windward Nissan,21.399453085430384,-157.79902564501552,1.0,2.0,Free,AeroVironment
+Commercial,Kaimuki Shopping Center,21.287044896773295,-157.80755929258643,1.0,2.0,Free until further notice,AeroVironment
+Commercial,Water Front Plaza,21.30097539500713,-157.8631373939972,1.0,2.0,"1st 2 hours free, $5 every additional hour",ChargePro
+Commercial,Aloha Island Mart Kahala,21.27824053410643,-157.78427584524786,1.0,,Free,AeroVironment
+Hotel,Best Western Plaza Hotel,21.33653458804565,-157.9131037259451,2.0,2.0,Free,AeroVironment
+School,Iolani School,21.286347176348407,-157.82475281350472,2.0,2.0,Free,AeroVironment
+Government,Hawaii State Capitol,21.307522459380436,-157.85646442453978,1.0,2.0,$2.00/hr up to 4 hours,Eaton
+Commercial,Aloha Stadium,21.371864453966737,-157.93368920719575,1.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,"Alamo Rent-a-Car, Nimitz",21.33583311686283,-157.9082114141057,1.0,2.0,"Free, 4 hours at a time",Better Place
+Commercial,Hawaii Convention Center,21.29030943573963,-157.83557317379913,1.0,2.0,$2.00/hour,Eaton?
+Hotel,Turtle Bay Resort,21.6976574741794,-157.99224422954634,6.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Hotel,Ohana Waikiki West,21.278564290037025,-157.82506909249693,2.0,2.0,Free,AeroVironment
+Commercial,Longs Drugs,21.394001265717975,-157.74199871665047,2.0,2.0,Free for up to 2 hours,Volta
+Condo,Keola Lai Condominium,21.302297398390238,-157.8581101838534,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Hotel,Waikiki Parc Hotel & Halekulani Hotel,21.278276506987652,-157.83050099755388,2.0,2.0,Free,Eaton
+Condo,Hokua Condominium,21.29181130352856,-157.84994433982735,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,DFS Waikiki Galleria,21.28042588663766,-157.82819873315887,2.0,2.0,Unknown,AeroVironment
+Commercial,"HMSA Center
+(Hawaii Medical Service)",21.297018378078235,-157.840879173772,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,Kapolei Shopping Center,21.33845913718835,-158.0784440810319,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Commercial,TOPA Financial Center,21.3072256831108,-157.86340719060598,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Airport,Honolulu International Airport,21.335604930654792,-157.91871398519555,1.0,2.0,Flat $7/session,
+Commercial,Kapolei Commons,21.328854377915434,-158.0914212979147,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Hotel,Ohana Waikiki East,21.277494096822124,-157.82488922809105,2.0,2.0,Free,AeroVironment
+Commercial,"Enterprise Rent-a-Car, Waikiki",21.277323225636565,-157.8247093636852,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+Hotel,Waikiki Sand Villa,21.279148849356034,-157.82297367216864,1.0,2.0,Free to Hotel Guests - Non Guests/Bar Patrons $10.00 per session,Schneider Electric
+Commercial,Kaiser Permanente Moanalua Medical Center,21.362489021811257,-157.90030637346817,2.0,2.0,Free.,Volta
+Hotel,Embassy Suites Waikiki,21.278030000184515,-157.82469000024318,2.0,2.0,Free,AeroVironment
+Hotel,Wyndham Hotel,21.279037461318318,-157.83102218381737,1.0,,Free,AeroVironment
