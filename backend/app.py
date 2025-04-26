@@ -7,11 +7,13 @@ import numpy as np
 # Streamlit app layout
 st.set_page_config(page_title="Oahu EV Charging Stations", layout="wide")
 st.title("Distribution of EV Charging Stations on Oahu")
+st.write("Red = Charging Stations, Blue = Population Centers. Circle size = log scale based on chargers or residents.")
 
-# Load your cleaned dataset
+# Load datasets
 df = pd.read_csv('data/clean_ev_stations.csv')
+df_pop = pd.read_csv('data/oahu_zip_population.csv')
 
-# Drop rows with missing coordinates
+# Drop missing coordinates
 df = df.dropna(subset=['Latitude', 'Longitude'])
 
 st.markdown(
@@ -26,13 +28,14 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+df_pop = df_pop.dropna(subset=['Latitude', 'Longitude'])
 
 # Sidebar for Facility filter (multiselect)
 facility_options = df['Facility'].dropna().unique()
 selected_facilities = st.sidebar.multiselect(
     "Select Facility Type(s)", 
     options=facility_options,
-    default=[]  # Default = none selected
+    default=[]
 )
 
 # Sidebar for Manufacturer filter (multiselect)
@@ -43,7 +46,7 @@ selected_manufacturers = st.sidebar.multiselect(
     default=[]
 )
 
-# Filter based on selection
+# Filter based on sidebar selection
 if selected_facilities:
     df = df[df['Facility'].isin(selected_facilities)]
 
@@ -51,13 +54,12 @@ if selected_manufacturers:
     df = df[df['Manufacturer'].isin(selected_manufacturers)]
 
 
-
-# Create a "size" column to determine radius size
-# You can make it proportional to number of chargers
+# Create "size" columns
 df['size'] = np.log1p(df['Number of Chargers']) * 400
+df_pop['size'] = np.sqrt(df_pop['Resident Population']) * 5
 
-# Define the ScatterplotLayer
-point_layer = pdk.Layer(
+# Define EV Charging Stations Layer
+ev_layer = pdk.Layer(
     "ScatterplotLayer",
     data=df,
     id="ev-charging-stations",
@@ -65,12 +67,26 @@ point_layer = pdk.Layer(
     get_color="[0, 100, 0, 160]",  # Bright red, semi-transparent
     pickable=True,
     auto_highlight=True,
-    get_radius="size",  
-    radius_min_pixels=1, 
-    radius_max_pixels=35,  
+    get_radius="size",
+    radius_min_pixels=2,
+    radius_max_pixels=35,
 )
 
-# Define the view state
+# Define Population Centers Layer
+pop_layer = pdk.Layer(
+    "ScatterplotLayer",
+    data=df_pop,
+    id="population-centers",
+    get_position=["Longitude", "Latitude"],
+    get_color="[0, 100, 255, 100]",  # Bright blue
+    pickable=False,
+    auto_highlight=True,
+    get_radius="size",
+    radius_min_pixels=5,
+    radius_max_pixels=40,
+)
+
+# Define the view
 view_state = pdk.ViewState(
     latitude=21.3,
     longitude=-157.8,
@@ -79,17 +95,21 @@ view_state = pdk.ViewState(
     controller=True,
 )
 
-# Build the pydeck chart
+# Build the pydeck map
 chart = pdk.Deck(
-    layers=[point_layer],
+    layers=[pop_layer, ev_layer],  # Population layer first so chargers show on top
     initial_view_state=view_state,
     map_style="mapbox://styles/mapbox/light-v9",
     tooltip={
-        "text": "{Facility}\n"
-        "Parking Lot: {Parking Lot}\n"
-                "Chargers: {Number of Chargers}\n"
-                "Fee: {Charge Fee}\n"
-                "Manufacturer: {Manufacturer}",
+        "html": "<b>Facility:</b> {Facility}<br/>"
+                "<b>Parking Lot:</b> {Parking Lot}<br/>"
+                "<b>Chargers:</b> {Number of Chargers}<br/>"
+                "<b>Fee:</b> {Charge Fee}<br/>"
+                "<b>Manufacturer:</b> {Manufacturer}",
+        "style": {
+            "backgroundColor": "red",
+            "color": "white"
+        }
     },
 )
 
@@ -110,8 +130,8 @@ bar_chart = alt.Chart(facility_counts).mark_bar().encode(
     title="Number of Charging Stations by Facility"
 )
 
-# Layout: Map and bar chart side-by-side
-col1, col2 = st.columns([3, 2])  # make the map bigger (2/3) and bar chart smaller (1/3)
+# --- Layout: Map + Bar Chart ---
+col1, col2 = st.columns([3, 2])
 
 with col1:
     st.pydeck_chart(chart, use_container_width=True)
@@ -134,4 +154,7 @@ with col2:
 
 # Expandable table to show all
 with st.expander("See full station list"):
-    st.dataframe(df.drop(columns=["size", "Latitude", "Longitude", "Charger Level"]))
+    st.dataframe(df.drop(columns=["size", "Latitude", "Longitude", "Charger Level"], errors='ignore'))
+
+with st.expander("See full population data"):
+    st.dataframe(df_pop.drop(columns=["size", "Latitude", "Longitude"], errors='ignore'))
