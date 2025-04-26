@@ -1,6 +1,7 @@
 import streamlit as st
 import pydeck as pdk
 import pandas as pd
+import altair as alt
 
 # Streamlit app layout
 st.set_page_config(page_title="Oahu EV Charging Stations", layout="wide")
@@ -12,6 +13,8 @@ df = pd.read_csv('data/clean_ev_stations.csv')
 
 # Drop rows with missing coordinates
 df = df.dropna(subset=['Latitude', 'Longitude'])
+
+
 
 # Sidebar for Facility filter (multiselect)
 facility_options = df['Facility'].dropna().unique()
@@ -39,9 +42,12 @@ if selected_manufacturers:
 # Show how many stations are being displayed
 st.write(f"🔋 Showing **{len(df)}** charging station(s).")
 
+
 # Create a "size" column to determine radius size
 # You can make it proportional to number of chargers
 df['size'] = df['Number of Chargers'] * 300  # Adjust multiplier to make circles bigger
+
+
 
 # Define the ScatterplotLayer
 point_layer = pdk.Layer(
@@ -56,9 +62,6 @@ point_layer = pdk.Layer(
     radius_min_pixels=1, 
     radius_max_pixels=35,  
 )
-
-
-
 
 # Define the view state
 view_state = pdk.ViewState(
@@ -83,6 +86,33 @@ chart = pdk.Deck(
                 "Manufacturer: {Manufacturer}",
     },
 )
+
+# --- Facility Bar Chart ---
+facility_counts = df['Facility'].value_counts().reset_index()
+facility_counts.columns = ['Facility', 'Count']
+
+bar_chart = alt.Chart(facility_counts).mark_bar().encode(
+    x=alt.X('Facility:N', title="Facility Type"),
+    y=alt.Y('Count:Q', title="Number of Stations"),
+    color='Facility:N'  # Color bars by facility
+).properties(
+    width=500,
+    height=600,
+    title="Number of Charging Stations by Facility Type"
+)
+
+# Layout: Map and bar chart side-by-side
+col1, col2 = st.columns([3, 2])  # make the map bigger (2/3) and bar chart smaller (1/3)
+
+with col1:
+    st.pydeck_chart(chart, use_container_width=True)
+
+with col2:
+    st.altair_chart(bar_chart, use_container_width=True)
+
+st.altair_chart(bar_chart, use_container_width=True)
+# --- End Facility Bar Chart ---
+
 
 
 
