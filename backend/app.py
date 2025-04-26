@@ -4,16 +4,14 @@ import pandas as pd
 import altair as alt
 import numpy as np
 
-# Streamlit app layout
 st.set_page_config(page_title="Oahu EV Charging Stations", layout="wide")
 st.title("Distribution of EV Charging Stations on Oahu")
 st.write("Green = Charging Stations, Red = Population Centers")
 
-# Load datasets
 df = pd.read_csv('data/clean_ev_stations.csv')
 df_pop = pd.read_csv('data/oahu_zip_population.csv')
 
-# Drop missing coordinates
+df = df.drop(columns=['Charge Fee'])
 df = df.dropna(subset=['Latitude', 'Longitude'])
 
 st.markdown(
