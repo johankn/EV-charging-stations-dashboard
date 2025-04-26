@@ -55,7 +55,7 @@ if selected_manufacturers:
 
 
 # Create "size" columns
-df['size'] = np.log1p(df['Number of Chargers']) * 400
+df['size'] = df['Number of Chargers'] * 100
 df_pop['size'] = np.sqrt(df_pop['Resident Population']) * 5
 
 # Define EV Charging Stations Layer
@@ -64,7 +64,7 @@ ev_layer = pdk.Layer(
     data=df,
     id="ev-charging-stations",
     get_position=["Longitude", "Latitude"],
-    get_color="[0, 100, 0, 160]",  # Bright red, semi-transparent
+    get_color="[0, 100, 0, 160]",  
     pickable=True,
     auto_highlight=True,
     get_radius="size",
@@ -78,7 +78,7 @@ pop_layer = pdk.Layer(
     data=df_pop,
     id="population-centers",
     get_position=["Longitude", "Latitude"],
-    get_color="[0, 100, 255, 100]",  # Bright blue
+    get_color="[255, 80, 80, 140]",
     pickable=False,
     auto_highlight=True,
     get_radius="size",
@@ -107,7 +107,7 @@ chart = pdk.Deck(
                 "<b>Fee:</b> {Charge Fee}<br/>"
                 "<b>Manufacturer:</b> {Manufacturer}",
         "style": {
-            "backgroundColor": "red",
+            "backgroundColor": "rgba(0, 128, 0, 0.7)",
             "color": "white"
         }
     },
