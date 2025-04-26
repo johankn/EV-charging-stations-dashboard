@@ -2,15 +2,46 @@ import streamlit as st
 import pydeck as pdk
 import pandas as pd
 
+# Streamlit app layout
+st.set_page_config(page_title="Oahu EV Charging Stations", layout="wide")
+st.title("🔌 Oahu EV Charging Stations Dashboard")
+st.write("Circle size = number of chargers.")
+
 # Load your cleaned dataset
 df = pd.read_csv('data/clean_ev_stations.csv')
 
 # Drop rows with missing coordinates
 df = df.dropna(subset=['Latitude', 'Longitude'])
 
+# Sidebar for Facility filter (multiselect)
+facility_options = df['Facility'].dropna().unique()
+selected_facilities = st.sidebar.multiselect(
+    "Select Facility Type(s)", 
+    options=facility_options,
+    default=[]  # Default = none selected
+)
+
+# Sidebar for Manufacturer filter (multiselect)
+manufacturer_options = df['Manufacturer'].dropna().unique()
+selected_manufacturers = st.sidebar.multiselect(
+    "Select Manufacturer(s)",
+    options=manufacturer_options,
+    default=[]
+)
+
+# Filter based on selection
+if selected_facilities:
+    df = df[df['Facility'].isin(selected_facilities)]
+
+if selected_manufacturers:
+    df = df[df['Manufacturer'].isin(selected_manufacturers)]
+
+# Show how many stations are being displayed
+st.write(f"🔋 Showing **{len(df)}** charging station(s).")
+
 # Create a "size" column to determine radius size
 # You can make it proportional to number of chargers
-df['size'] = df['Number of Chargers'] * 100  # Adjust multiplier to make circles bigger
+df['size'] = df['Number of Chargers'] * 300  # Adjust multiplier to make circles bigger
 
 # Define the ScatterplotLayer
 point_layer = pdk.Layer(
@@ -25,6 +56,8 @@ point_layer = pdk.Layer(
     radius_min_pixels=1, 
     radius_max_pixels=35,  
 )
+
+
 
 
 # Define the view state
@@ -50,10 +83,7 @@ chart = pdk.Deck(
     },
 )
 
-# Streamlit app layout
-st.set_page_config(page_title="Oahu EV Charging Stations", layout="wide")
-st.title("🔌 Oahu EV Charging Stations Dashboard")
-st.write("Circle size = number of chargers.")
+
 
 # Render the map
 event = st.pydeck_chart(chart, on_select="rerun", selection_mode="multi-object")
