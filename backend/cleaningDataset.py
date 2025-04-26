@@ -27,7 +27,7 @@ df[['Latitude', 'Longitude']] = df['Address'].apply(lambda x: pd.Series(extract_
 df = df.dropna(subset=['Latitude', 'Longitude'])
 
 # Clean up the DataFrame: only keep useful columns
-final_df = df[['Facility', 'Latitude', 'Longitude', 'Number of Chargers', 'Charger Level', 'Charge Fee', 'Manufacturer']]
+final_df = df[['Facility','Parking Lot', 'Latitude', 'Longitude', 'Number of Chargers', 'Charger Level', 'Charge Fee', 'Manufacturer']]
 
 # Fill missing values for consistency
 final_df['Charge Fee'] = final_df['Charge Fee'].fillna('Unknown')
