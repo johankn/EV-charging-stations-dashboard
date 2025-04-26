@@ -1,6 +1,7 @@
 import streamlit as st
 import pydeck as pdk
 import pandas as pd
+import numpy as np
 
 # Load your cleaned dataset
 df = pd.read_csv('data/clean_ev_stations.csv')
@@ -10,7 +11,7 @@ df = df.dropna(subset=['Latitude', 'Longitude'])
 
 # Create a "size" column to determine radius size
 # You can make it proportional to number of chargers
-df['size'] = df['Number of Chargers'] * 100  # Adjust multiplier to make circles bigger
+df['size'] = np.log1p(df['Number of Chargers']) * 400
 
 # Define the ScatterplotLayer
 point_layer = pdk.Layer(
@@ -46,7 +47,6 @@ chart = pdk.Deck(
         "Parking Lot: {Parking Lot}\n"
                 "Chargers: {Number of Chargers}\n"
                 "Fee: {Charge Fee}\n"
-                "Level: {Charger Level}\n"
                 "Manufacturer: {Manufacturer}",
     },
 )
@@ -61,4 +61,4 @@ event = st.pydeck_chart(chart, on_select="rerun", selection_mode="multi-object")
 
 # Expandable table to show all
 with st.expander("See full station list"):
-    st.dataframe(df.drop(columns=["size"]))
+    st.dataframe(df.drop(columns=["size", "Latitude", "Longitude", "Charger Level"]))
