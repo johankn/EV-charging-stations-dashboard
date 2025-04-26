@@ -6,8 +6,7 @@ import numpy as np
 
 st.set_page_config(page_title="Oahu EV Charging Stations", layout="wide")
 st.title("Distribution of EV Charging Stations on Oahu")
-st.write("Green = Charging Stations, Red = Population Centers")
-
+st.markdown("🟢 *Green* = Charging Stations &nbsp;&nbsp;&nbsp;&nbsp; 🔴 *Red* = Population Centers")
 df = pd.read_csv('data/clean_ev_stations.csv')
 df_pop = pd.read_csv('data/oahu_zip_population.csv')
 
