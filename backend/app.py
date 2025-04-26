@@ -108,14 +108,6 @@ with col1:
 with col2:
     st.altair_chart(bar_chart, use_container_width=True)
 
-st.altair_chart(bar_chart, use_container_width=True)
-# --- End Facility Bar Chart ---
-
-
-
-
-# Render the map
-event = st.pydeck_chart(chart, on_select="rerun", selection_mode="multi-object")
 
 # Expandable table to show all
 with st.expander("See full station list"):
