@@ -7,7 +7,7 @@ import numpy as np
 # Streamlit app layout
 st.set_page_config(page_title="Oahu EV Charging Stations", layout="wide")
 st.title("Distribution of EV Charging Stations on Oahu")
-st.write("Red = Charging Stations, Blue = Population Centers. Circle size = log scale based on chargers or residents.")
+st.write("Green = Charging Stations, Red = Population Centers")
 
 # Load datasets
 df = pd.read_csv('data/clean_ev_stations.csv')
@@ -56,7 +56,7 @@ if selected_manufacturers:
 
 # Create "size" columns
 df['size'] = df['Number of Chargers'] * 100
-df_pop['size'] = np.sqrt(df_pop['Resident Population']) * 5
+df_pop['size'] = df_pop['Resident Population'] / 50
 
 # Define EV Charging Stations Layer
 ev_layer = pdk.Layer(
