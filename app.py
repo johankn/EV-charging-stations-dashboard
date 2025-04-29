@@ -26,8 +26,15 @@ chargers_by_zip.columns = ['Zip Code', 'Number of Chargers']
 merged = pd.merge(df_pop, chargers_by_zip, on='Zip Code', how='left')
 merged['Number of Chargers'] = merged['Number of Chargers'].fillna(0)  # Fill empty values with 0
 merged['Chargers per 1000'] = (merged['Number of Chargers'] / merged['Resident Population']) * 1000
+pop_threshold = 3000
+filtered = merged[merged['Resident Population'] > pop_threshold]
+# Step 1: Sort by lowest chargers per 1000
+merged_sorted = filtered.sort_values(by='Chargers per 1000')
 
-merged_sorted = merged.sort_values(by='Chargers per 1000')
+# Step 2: Among bottom 10 (or more), choose top 3 by population
+bottom_underserved = merged_sorted.head(10)  # can change to 15, 20, etc.
+top3_underserved = bottom_underserved.sort_values(by='Resident Population', ascending=False).head(5)
+
 
 st.markdown(
     """
@@ -164,10 +171,23 @@ with col2:
     # Then the bar chart below
     st.altair_chart(bar_chart, use_container_width=True)
 
-st.subheader("Top 3 Most Underserved Areas (Stations Per 1000)")
-top3_underserved = merged_sorted.head(3)
-for index, row in top3_underserved.iterrows():
-    st.write(f"📍 {row['Area']}")
+st.subheader("Top 5 Most Underserved High-Population Areas")
+
+
+underserved_display = top3_underserved[[
+    'Zip Code', 'Area', 'Resident Population', 'Number of Chargers', 'Chargers per 1000'
+]].copy()
+
+underserved_display.columns = ['ZIP', 'Area', 'Population', 'Chargers', 'Chargers per 1000']
+underserved_display['Population'] = underserved_display['Population'].astype(int)
+underserved_display['Chargers'] = underserved_display['Chargers'].astype(int)
+underserved_display['Chargers per 1000'] = underserved_display['Chargers per 1000'].round(2)
+
+underserved_display.index = range(1, len(underserved_display) + 1)  # Force 1-based index
+st.table(underserved_display)
+
+
+
 
 # Expandable table to show all
 with st.expander("See full station list"):
