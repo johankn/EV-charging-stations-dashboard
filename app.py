@@ -13,6 +13,22 @@ df_pop = pd.read_csv('backend/data/oahu_zip_population.csv')
 df = df.drop(columns=['Charge Fee'])
 df = df.dropna(subset=['Latitude', 'Longitude'])
 
+# Match EV stations to nearest population center
+df['Zip Code'] = df.apply(
+    lambda row: df_pop.loc[
+        ((df_pop['Latitude'] - row['Latitude'])**2 + (df_pop['Longitude'] - row['Longitude'])**2).idxmin(),
+        'Zip Code'
+    ],
+    axis=1
+)
+chargers_by_zip = df.groupby('Zip Code')['Number of Chargers'].sum().reset_index()
+chargers_by_zip.columns = ['Zip Code', 'Number of Chargers']  
+merged = pd.merge(df_pop, chargers_by_zip, on='Zip Code', how='left')
+merged['Number of Chargers'] = merged['Number of Chargers'].fillna(0)  # Fill empty values with 0
+merged['Chargers per 1000'] = (merged['Number of Chargers'] / merged['Resident Population']) * 1000
+
+merged_sorted = merged.sort_values(by='Chargers per 1000')
+
 st.markdown(
     """
     <style>
@@ -101,7 +117,6 @@ chart = pdk.Deck(
         "html": "<b>Facility:</b> {Facility}<br/>"
                 "<b>Parking Lot:</b> {Parking Lot}<br/>"
                 "<b>Chargers:</b> {Number of Chargers}<br/>"
-                "<b>Fee:</b> {Charge Fee}<br/>"
                 "<b>Manufacturer:</b> {Manufacturer}",
         "style": {
             "backgroundColor": "rgba(0, 128, 0, 0.7)",
@@ -148,6 +163,11 @@ with col2:
     
     # Then the bar chart below
     st.altair_chart(bar_chart, use_container_width=True)
+
+st.subheader("Top 3 Most Underserved Areas (Stations Per 1000)")
+top3_underserved = merged_sorted.head(3)
+for index, row in top3_underserved.iterrows():
+    st.write(f"📍 {row['Area']}")
 
 # Expandable table to show all
 with st.expander("See full station list"):
