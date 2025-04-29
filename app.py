@@ -175,13 +175,11 @@ st.subheader("Top 5 Most Underserved High-Population Areas")
 
 
 underserved_display = top3_underserved[[
-    'Zip Code', 'Area', 'Resident Population', 'Number of Chargers', 'Chargers per 1000'
+    'Zip Code', 'Area', 'Resident Population'
 ]].copy()
 
-underserved_display.columns = ['ZIP', 'Area', 'Population', 'Chargers', 'Chargers per 1000']
+underserved_display.columns = ['ZIP', 'Area', 'Population']
 underserved_display['Population'] = underserved_display['Population'].astype(int)
-underserved_display['Chargers'] = underserved_display['Chargers'].astype(int)
-underserved_display['Chargers per 1000'] = underserved_display['Chargers per 1000'].round(2)
 
 underserved_display.index = range(1, len(underserved_display) + 1)  # Force 1-based index
 st.table(underserved_display)

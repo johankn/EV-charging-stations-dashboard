@@ -30,7 +30,7 @@ Commercial,Aloha Island Mart Waipio-Gentry,21.41153804528932,-157.99960051872316
 Commercial,Stadium Marketplace,21.365303899762974,-157.92906669196518,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
 Commercial,Green Energy Outlet,21.299662384844396,-157.8573277736879,2.0,2.0,$4.00 per session plus $2.00/30 minutes,ChargePoint Network and Tesla
 Commercial,Waikele Center,21.399988788222664,-158.00521770573695,2.0,2.0,Free,AeroVironment
-School,Univ of Hawaii Lower Campus Parking Garage, 21.296688323885725, -157.82060108650663,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
+School,Univ of Hawaii Lower Campus Parking Garage,21.296688323885725,-157.82060108650663,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
 Commercial,Polynesian Cultural Center,21.638913194296748,-157.91929194484317,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
 Commercial,Central Pacific Plaza,21.30729762887313,-157.86053835333252,2.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
 Commercial,USA Hawaii Credit Union,21.315085757646894,-157.86148264146328,4.0,2.0,"Free until Dec 31st 2012, 4 hours at a time",Better Place
@@ -81,3 +81,9 @@ Commercial,Kaiser Permanente Moanalua Medical Center,21.362489021811257,-157.900
 Hotel,Embassy Suites Waikiki,21.278030000184515,-157.82469000024318,2.0,2.0,Free,AeroVironment
 Hotel,Wyndham Hotel,21.27903746131832,-157.83102218381737,1.0,,Free,AeroVironment
 Commercial,Haleiwa Town Center,21.589799507336615,-158.1031133307294,1.0,3.0,Unknown,CHAdeMO
+Commercial,Waianae Mall,21.437384881680295,-158.18487790204424,1.0,3.0,Unknown,CHAdeMO
+Commercial,Waianae Comprehensive Medical Center,21.431620072137115,-158.17969383258605,4.0,2.0,Unknown,J-1772
+School,Pacific American Foundation,21.41177868463694,-157.78853107073803,12.0,3.0,Unknown,NACS (Tesla)
+Commercial,7-Eleven Hawaii Kai,21.29984704363575,-157.7102410195682,1.0,3.0,Unknown,CHAdeMO
+Hotel,The Kahala Hotel & Resort,21.278170540307187,-157.77286469746178,12.0,3.0,Unknown,NACS (Tesla)
+School,Iliahi Elementary School,21.511466832741064,-157.9985295677912,1.0,2.0,Unknown,J-1772
