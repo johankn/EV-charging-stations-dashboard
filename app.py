@@ -171,7 +171,7 @@ with col2:
     # Then the bar chart below
     st.altair_chart(bar_chart, use_container_width=True)
 
-st.subheader("Top 5 Most Underserved High-Population Areas")
+st.subheader("Top 5 Most Underserved High-Population Areas (Stations per 1000)")
 
 
 underserved_display = top3_underserved[[
